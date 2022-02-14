@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Livre</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="mes-styles.css">
+</head>
+<body>
+
+<div class="conteneur coulFond">
+<h2>Ajouter un livre</h2>
+</div>
+
+<div class="conteneur">
+  <button onclick="document.getElementById('bdg').style.display='block'" class="bouton bleu tailleL">Commencer</button>
+
+  <div id="bdg" class="boite">
+    <div class="boite-contenu">
+      <div class="centrer"><br>
+        <span onclick="document.getElementById('bdg').style.display='none'" class="bouton tailleL transparent positionHautDroit" title="Close Modal">×</span>
+        <img src="image.jfif" alt="Avatar" style="width:60%" class="cercle margeHaut">
+      </div>
+
+      <form class="conteneur" action = "/add"  method="POST">
+        <div class="section">
+          <label><b>ISBN :</b></label>
+          <input class="zoneSaisie margeBas" placeholder="Entrer le  code du livre" type="text" name="isbn" required id="isbn"><br><br>
+
+          <label><b>TITRE :</b></label>
+          <input class="zoneSaisie margeBas" placeholder="Entrer le  Titre du livre" type="text" name="tit" required id="tit"><br><br>
+
+          
+          <label><b>Date de publication :</b></label>
+          <input class="zoneSaisie margeBas" placeholder="Entrer votre Date de publication" type="date" required value="2018-07-22"	min="1990-01-01" max="2022-02-09" name="dat_pub" id="dat_pub"><br><br>
+
+          <label><b>Nom de l'autreur :</b></label> 
+          <input class="zoneSaisie" type="text" placeholder="Entrer le nom de l'auteur" name="auteur" required id="auteur"><br><br>  
+          
+          <label><b>Nom de l'éditeur :</b></label>        
+          <input class="zoneSaisie" type="text" placeholder="Entrer le nom de l'éditeur " name="edit" required id="edit"><br><br>
+
+          <label><b>Entrer l'identifiant de la categorie du livre :</b></label>
+          <input class="zoneSaisie margeBas" placeholder="Entrer le  code du livre" type="text" name="cate" required id="cate"><br><br>
+        
+		  <button class="bouton bloc bleu section decalage" type="submit">Valider</button>
+        </div>
+      </form>
+
+      <div class="conteneur bordureHaut decalage16 grisClair">
+        <button onclick="document.getElementById('bdg').style.display='none'" type="button" class="bouton rouge">Annuler</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html> 

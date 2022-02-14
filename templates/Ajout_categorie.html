@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Categorie</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="mes-styles.css">
+</head>
+<body>
+
+<div class="conteneur coulFond">
+<h2>Ajouter une categorie</h2>
+</div>
+
+<div class="conteneur">
+  <button onclick="document.getElementById('bdg').style.display='block'" class="bouton bleu tailleL">Cliquez ici</button>
+
+  <div id="bdg" class="boite">
+    <div class="boite-contenu">
+      <div class="centrer"><br>
+        <span onclick="document.getElementById('bdg').style.display='none'" class="bouton tailleL transparent positionHautDroit" title="Close Modal">×</span>
+        <img src="image.jfif" alt="Avatar" style="width:60%" class="cercle margeHaut">
+      </div>
+
+      <form class="conteneur" action = "/add_categorie"  method="POST">
+        <div class="section">
+          <label><b>Libellé :</b> </label>
+          <input class="zoneSaisie margeBas" placeholder="Entrer le libelle de cette categorie" type="text" name="cat" required id="cat"><br><br>
+          <button class="bouton bloc bleu section decalage" type="submit">Valider</button>
+        </div>
+      </form>
+
+      <div class="conteneur bordureHaut decalage16 grisClair">
+        <button onclick="document.getElementById('bdg').style.display='none'" type="button" class="bouton rouge">Annuler</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>   
